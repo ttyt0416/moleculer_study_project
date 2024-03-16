@@ -25,6 +25,20 @@ module.exports = {
 		// Global Express middlewares. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Middlewares
 		use: [],
 
+		cors: {
+			methods: [
+				"DELETE",
+				"GET",
+				"HEAD",
+				"OPTIONS",
+				"PATCH",
+				"POST",
+				"PUT",
+			],
+			origin: [""],
+			// origin: "*",
+		},
+
 		routes: [
 			{
 				path: "/api",
@@ -52,6 +66,19 @@ module.exports = {
 				aliases: {
 
 				},
+
+				cors: {
+					methods: [
+						"DELETE",
+						"GET",
+						"HEAD",
+						"OPTIONS",
+						"PATCH",
+						"POST",
+						"PUT",
+					],
+					origin: ["*"],
+				},	
 
 				/**
 				 * Before call hook. You can check the request.
