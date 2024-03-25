@@ -27,6 +27,7 @@ module.exports = {
 			"_id",
 			"title",
 			"body",
+			"category",
 			"comments",
 			"createdAt",
 			"updatedAt",
@@ -63,14 +64,16 @@ module.exports = {
 			params: {
 				title: "string",
 				body: "string",
+				category: "string",
 			},
 			async handler(ctx) {
-				const {title, body} = ctx.params
+				const {title, body, category} = ctx.params
 
 				try {
 					const inserted = await this.adapter.insert({
 						title,
 						body,
+						category,
 						comments: [],
 						createdAt: new Date(),
 						updatedAt: new Date(),

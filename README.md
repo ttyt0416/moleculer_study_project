@@ -39,3 +39,7 @@ In the terminal, try the following commands:
 - `npm test`: Run tests & generate coverage report
 - `npm run dc:up`: Start the stack with Docker Compose
 - `npm run dc:down`: Stop the stack with Docker Compose
+
+docker-compose up -d mongo
+docker-compose up -d mongo-express
+docker-compose up -d nats
